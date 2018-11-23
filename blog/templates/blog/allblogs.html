@@ -38,9 +38,12 @@
         <hr>
         <div class="container">
             {% for blog in allblogs.all %}
-            <div class="row">
-                <p>{{blog.title}}</p>
-            </div>
+                <a href =""><h3>{{blog.title}}</h3></a>
+                <p>{{blog.pub_date_pretty}}</p>
+
+            <img class = "img-fluid" src="{{ blog.image.url}}" height="200" width="200"/>
+            <p>{{blog.summary}}</p>
+            <br>
             {% endfor %}
         </div>
     </div>
